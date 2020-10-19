@@ -1,18 +1,18 @@
 //
-//  EnglishVC.swift
+//  File.swift
 //  نتعلم
 //
-//  Created by mariam alfoudari on 10/17/20.
+//  Created by mariam alfoudari on 10/18/20.
 //
 
 import UIKit
-class EnglishVC: UIViewController{
+class ArabicVC: UIViewController{
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let imageNames = ["1", "2", "3", "4", "5", "6","7", "8", "9", "10", "11", "12","13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26",]
-        lazy var cardLayout: CardCollectionViewLayout = {
-        let layout = CardCollectionViewLayout()
+    let imageNames = ["one", "two", "three", "four", "five", "six","seven", "eight", "nine", "ten", "eleven", "twelve","thirteen", "fourteen", "fiveteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty", "twentyone", "twentytwo", "twentythree", "twentyfour", "twentyfive", "twentysix", "twentyseven", "twentyeight"]
+        lazy var cardLayout: CardCollectionViewLayoutAR = {
+        let layout = CardCollectionViewLayoutAR()
         layout.maximumVisibleItems = 4
         return layout
     }()
@@ -20,7 +20,7 @@ class EnglishVC: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "الاحرف الانجليزية"
+        title = "الاحرف العربية"
         setupView()
     }
     
@@ -35,7 +35,7 @@ class EnglishVC: UIViewController{
 //        let cellNib = UINib(nibName: "EnglishCardCell", bundle: nil)
 //        collectionView.register(cellNib, forCellWithReuseIdentifier: "EnglishCardCell")
         
-        let barButton = UIBarButtonItem(title: "play song", style: .done, target: self, action: "" )
+        let barButton = UIBarButtonItem(title: "play song", style: .done, target: self, action:"" )
         navigationItem.setRightBarButton(barButton, animated: false)
     }
 //
@@ -49,7 +49,7 @@ class EnglishVC: UIViewController{
 }
 
 // MARK: UICollectionViewDataSource
-extension EnglishVC: UICollectionViewDataSource {
+extension ArabicVC: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -61,7 +61,7 @@ extension EnglishVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EnglishCardCell", for: indexPath) as! EnglishCardCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ArabicCardCell", for: indexPath) as! ArabicCardCell
         cell.imageName = imageNames[indexPath.row]
         cell.loadContent()
         return cell
@@ -70,7 +70,7 @@ extension EnglishVC: UICollectionViewDataSource {
 }
 
 // MARK: UICollectionViewDelegate
-extension EnglishVC: UICollectionViewDelegate {
+extension ArabicVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
     }

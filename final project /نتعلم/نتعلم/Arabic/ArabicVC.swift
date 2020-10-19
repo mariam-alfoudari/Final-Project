@@ -63,7 +63,7 @@ extension ArabicVC: UICollectionViewDataSource {
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ArabicCardCell", for: indexPath) as! ArabicCardCell
         cell.imageName = imageNames[indexPath.row]
-        cell.loadContent()
+        cell.loadContent2()
         return cell
     }
     

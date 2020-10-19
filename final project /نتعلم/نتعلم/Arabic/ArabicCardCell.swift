@@ -17,7 +17,7 @@ class ArabicCardCell: UICollectionViewCell {
         // Initialization code
 //    }
     
-    func loadContent() {
+    func loadContent2() {
         if imageName == nil { return }
         if let image = UIImage(named:imageName!) {
             imageView.image = image

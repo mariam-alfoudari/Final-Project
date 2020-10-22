@@ -119,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g2J-da-d8e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3259" y="826"/>
+            <point key="canvasLocation" x="3093" y="800"/>
         </scene>
         <!--EnglishLetters-->
         <scene sceneID="dBf-OM-Cce">
@@ -217,10 +217,11 @@
             </objects>
             <point key="canvasLocation" x="4057" y="310"/>
         </scene>
-        <!--View Controller-->
+        <!--Number Data-->
         <scene sceneID="Mci-VE-kZL">
             <objects>
-                <viewController id="j3p-jP-HPA" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rt8-uA-7wI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="j3p-jP-HPA" customClass="NumberData" customModule="نتعلم" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c2H-8U-NV7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -235,8 +236,10 @@
                         <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.74117647060000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="EZc-17-gu5"/>
+                    <connections>
+                        <outlet property="NumberImg" destination="uir-Ml-FLi" id="xHh-6R-tWx"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rt8-uA-7wI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2625" y="1572"/>
         </scene>
@@ -449,12 +452,12 @@
                         <outlet property="NumberBtn7" destination="XaD-Oo-oyE" id="het-JA-6gy"/>
                         <outlet property="NumberBtn8" destination="pHC-zn-7mJ" id="Edd-L5-qcQ"/>
                         <outlet property="NumberBtn9" destination="iju-s9-gXm" id="XtN-FE-zUa"/>
-                        <segue destination="j3p-jP-HPA" kind="showDetail" identifier="Detail" id="V6x-ww-S0v"/>
+                        <segue destination="j3p-jP-HPA" kind="showDetail" identifier="Details" id="V6x-ww-S0v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cNz-bT-Hq6" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1777" y="826"/>
+            <point key="canvasLocation" x="2262" y="810"/>
         </scene>
     </scenes>
     <resources>

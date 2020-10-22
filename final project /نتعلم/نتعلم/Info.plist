@@ -57,6 +57,8 @@
 	</array>
 	<key>privacy - photo Library Usage Description</key>
 	<string>To store a drawing as an image in your photo library</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>THIS APP WANT TO STORE</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

@@ -20,6 +20,9 @@ class DrawingVC: UIViewController, PKCanvasViewDelegate, PKToolPickerObserver {
     
     override func viewDidLoad(){
       super.viewDidLoad()
+        
+        title = "ابدع و ارسم!"
+        
        CanvasView.delegate = self
         CanvasView.drawing = drawing
         CanvasView.alwaysBounceVertical = true

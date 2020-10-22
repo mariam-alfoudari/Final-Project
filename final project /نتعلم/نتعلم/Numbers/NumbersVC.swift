@@ -23,10 +23,11 @@ class NumbersVC: UIViewController {
 
     override func viewDidLoad() {
       super.viewDidLoad()
+        title = "اضغظ على الارقام!"
          }
 
     @IBAction func Tap(_ sender: UIButton) {
-        performSegue(withIdentifier: "Detail", sender: nil)
+        performSegue(withIdentifier: "Details", sender: nil)
     }
 
 }

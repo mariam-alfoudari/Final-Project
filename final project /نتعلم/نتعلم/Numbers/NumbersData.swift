@@ -5,21 +5,22 @@
 //  Created by mariam alfoudari on 10/20/20.
 //
 
-//import Foundation
+import UIKit
+
+class NumberData: UIViewController {
+    @IBOutlet weak var NumberImg: UIImageView!
+
+    var images = ["image0"]
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+//setNumberDetails()
+//        // Do any additional setup after loading the view.
+//    }
+//    func setNumberDetails(){
 //
-//
-////class NumberData: UIViewController {
-////    @IBOutlet weak var movieImg: UIImageView!
-////    @IBOutlet weak var moviePg: UILabel!
-////    @IBOutlet weak var movieRt: UILabel!
-////    @IBOutlet weak var movieYear: UILabel!
-////    @IBOutlet weak var actor1: UIImageView!
-////    @IBOutlet weak var actor1Lbl: UILabel!
-////    @IBOutlet weak var actor2: UIImageView!
-////    @IBOutlet weak var actor2Lbl: UILabel!
-////    @IBOutlet weak var actor3: UIImageView!
-////    @IBOutlet weak var actor3Lbl: UILabel!
-////}
 //var NumbersData: [Numbers] = [
 //   Numbers(NumberName: "١", PlayNumber:  "mp.3" ),
 //    Numbers(NumberName: "٢", PlayNumber: "mp.3" ),
@@ -33,3 +34,5 @@
 //     Numbers(NumberName: "١٠", PlayNumber: "mp.3" ),
 //     ]
 //
+//}
+}

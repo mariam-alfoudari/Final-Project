@@ -19,9 +19,12 @@
 		395818DF253CD5190051B10C /* ArabicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395818DE253CD5190051B10C /* ArabicVC.swift */; };
 		395818E4253CD6A80051B10C /* ArabicCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395818E3253CD6A80051B10C /* ArabicCardCell.swift */; };
 		395818E9253CD6FB0051B10C /* ArabicVL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395818E8253CD6FB0051B10C /* ArabicVL.swift */; };
-		39D23394253DF9650036C983 /* NumbersButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D23393253DF9650036C983 /* NumbersButtons.swift */; };
+		39BD0AE1253F333D004E5F11 /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BD0AE0253F333D004E5F11 /* Numbers.swift */; };
+		39BD0AE4253F33FB004E5F11 /* NumbersData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BD0AE3253F33FB004E5F11 /* NumbersData.swift */; };
+		39BD0AE9253F3BB6004E5F11 /* NumbersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BD0AE8253F3BB6004E5F11 /* NumbersVC.swift */; };
 		39DFF345253CA82E0065D288 /* Lateef-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39DFF342253CA8170065D288 /* Lateef-Regular.ttf */; };
 		39DFF347253CA8320065D288 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 39DFF343253CA8190065D288 /* OFL.txt */; };
+		39EBEFF82541C6A200FC5EBA /* DrawingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EBEFF72541C6A200FC5EBA /* DrawingVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,9 +42,12 @@
 		395818DE253CD5190051B10C /* ArabicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArabicVC.swift; sourceTree = "<group>"; };
 		395818E3253CD6A80051B10C /* ArabicCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArabicCardCell.swift; sourceTree = "<group>"; };
 		395818E8253CD6FB0051B10C /* ArabicVL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArabicVL.swift; sourceTree = "<group>"; };
-		39D23393253DF9650036C983 /* NumbersButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersButtons.swift; sourceTree = "<group>"; };
+		39BD0AE0253F333D004E5F11 /* Numbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numbers.swift; sourceTree = "<group>"; };
+		39BD0AE3253F33FB004E5F11 /* NumbersData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersData.swift; sourceTree = "<group>"; };
+		39BD0AE8253F3BB6004E5F11 /* NumbersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersVC.swift; sourceTree = "<group>"; };
 		39DFF342253CA8170065D288 /* Lateef-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lateef-Regular.ttf"; sourceTree = "<group>"; };
 		39DFF343253CA8190065D288 /* OFL.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		39EBEFF72541C6A200FC5EBA /* DrawingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,13 +80,14 @@
 		3928CE30253C6FAD001CDED4 /* نتعلم */ = {
 			isa = PBXGroup;
 			children = (
-				39D23390253DF8350036C983 /* Numbers */,
 				39DFF326253CA0D90065D288 /* Font */,
+				39D23390253DF8350036C983 /* Numbers */,
 				395818DD253CD4FF0051B10C /* Arabic */,
 				39DFF328253CA1110065D288 /* English */,
 				3928CE35253C6FAD001CDED4 /* ViewController.swift */,
 				3928CE5B253C7133001CDED4 /* LaunchScreen.storyboard */,
 				3928CE48253C6FFD001CDED4 /* Main.storyboard */,
+				39EBEFF72541C6A200FC5EBA /* DrawingVC.swift */,
 				3928CE31253C6FAD001CDED4 /* AppDelegate.swift */,
 				3928CE33253C6FAD001CDED4 /* SceneDelegate.swift */,
 				3928CE3F253C6FAE001CDED4 /* Info.plist */,
@@ -102,7 +109,9 @@
 		39D23390253DF8350036C983 /* Numbers */ = {
 			isa = PBXGroup;
 			children = (
-				39D23393253DF9650036C983 /* NumbersButtons.swift */,
+				39BD0AE0253F333D004E5F11 /* Numbers.swift */,
+				39BD0AE3253F33FB004E5F11 /* NumbersData.swift */,
+				39BD0AE8253F3BB6004E5F11 /* NumbersVC.swift */,
 			);
 			path = Numbers;
 			sourceTree = "<group>";
@@ -198,12 +207,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39D23394253DF9650036C983 /* NumbersButtons.swift in Sources */,
 				3928CE36253C6FAD001CDED4 /* ViewController.swift in Sources */,
 				3928CE32253C6FAD001CDED4 /* AppDelegate.swift in Sources */,
+				39BD0AE1253F333D004E5F11 /* Numbers.swift in Sources */,
+				39EBEFF82541C6A200FC5EBA /* DrawingVC.swift in Sources */,
+				39BD0AE9253F3BB6004E5F11 /* NumbersVC.swift in Sources */,
 				395818DF253CD5190051B10C /* ArabicVC.swift in Sources */,
 				3928CE4C253C704D001CDED4 /* EnglishVL.swift in Sources */,
 				3928CE61253C7E5B001CDED4 /* EnglishVC.swift in Sources */,
+				39BD0AE4253F33FB004E5F11 /* NumbersData.swift in Sources */,
 				395818E4253CD6A80051B10C /* ArabicCardCell.swift in Sources */,
 				3928CE50253C7083001CDED4 /* EnglishCardCell.swift in Sources */,
 				395818E9253CD6FB0051B10C /* ArabicVL.swift in Sources */,

@@ -35,7 +35,7 @@ class ArabicVC: UIViewController{
 //        let cellNib = UINib(nibName: "EnglishCardCell", bundle: nil)
 //        collectionView.register(cellNib, forCellWithReuseIdentifier: "EnglishCardCell")
         
-        let barButton = UIBarButtonItem(title: "play song", style: .done, target: self, action:"" )
+        let barButton = UIBarButtonItem(title: "play song", style: .done, target: self, action: "" )
         navigationItem.setRightBarButton(barButton, animated: false)
     }
 //

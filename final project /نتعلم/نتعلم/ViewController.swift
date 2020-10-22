@@ -24,6 +24,8 @@ import UIKit
             DrawButton.layer.cornerRadius = 20
             QuizButton.layer.cornerRadius = 20
             
+            let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.black]
+            navigationController?.navigationBar.titleTextAttributes = textAttributes
             // Do any additional setup after loading the view.
         }
 

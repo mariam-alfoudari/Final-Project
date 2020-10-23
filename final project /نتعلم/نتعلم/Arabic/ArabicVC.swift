@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 class ArabicVC: UIViewController{
 
     @IBOutlet weak var collectionView: UICollectionView!
@@ -16,6 +17,8 @@ class ArabicVC: UIViewController{
         layout.maximumVisibleItems = 4
         return layout
     }()
+    
+    var ArabicSong: AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +43,14 @@ class ArabicVC: UIViewController{
     }
     
     @objc func play(){
-        print("I'm playing!")
+        do {
+            let path = Bundle.main.path(forResource: "ArabicSong.mp3", ofType:nil)!
+            let url = URL(fileURLWithPath: path)
+            ArabicSong = try AVAudioPlayer(contentsOf: url)
+            ArabicSong?.play()
+        } catch {
+        print("ArabicSongIsNotPlaying")
+    }
     }
 //
 //    @objc fileprivate func switchLayout() {
@@ -79,3 +89,4 @@ extension ArabicVC: UICollectionViewDelegate {
         
     }
 }
+

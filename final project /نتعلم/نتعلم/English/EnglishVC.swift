@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import AVFoundation
+
 class EnglishVC: UIViewController{
 
     @IBOutlet weak var collectionView: UICollectionView!
@@ -16,6 +18,8 @@ class EnglishVC: UIViewController{
         layout.maximumVisibleItems = 4
         return layout
     }()
+    
+    var EnglishSong: AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,8 +39,18 @@ class EnglishVC: UIViewController{
 //        let cellNib = UINib(nibName: "EnglishCardCell", bundle: nil)
 //        collectionView.register(cellNib, forCellWithReuseIdentifier: "EnglishCardCell")
         
-        let barButton = UIBarButtonItem(title: "play song", style: .done, target: self, action: "" )
+        let barButton = UIBarButtonItem(title: "play song", style: .done, target: self, action: #selector(play1) )
         navigationItem.setRightBarButton(barButton, animated: false)
+    }
+    @objc func play1(){
+        do {
+            let path = Bundle.main.path(forResource: "EnglishSong.mp3", ofType:nil)!
+            let url = URL(fileURLWithPath: path)
+            EnglishSong = try AVAudioPlayer(contentsOf: url)
+            EnglishSong?.play()
+        } catch {
+        print("ArabicSongIsNotPlaying")
+    }
     }
 //
 //    @objc fileprivate func switchLayout() {

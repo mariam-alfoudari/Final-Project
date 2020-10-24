@@ -23,7 +23,7 @@ class NumbersVC: UIViewController {
 
     override func viewDidLoad() {
       super.viewDidLoad()
-        title = "اضغظ على الارقام!"
+        title = "اضغط على الارقام!"
          }
 //    @IBAction func IfNumberTap(_ sender: UIButton) {
 //        switch sender.tag {

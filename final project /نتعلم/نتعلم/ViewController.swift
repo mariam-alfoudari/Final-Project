@@ -25,7 +25,7 @@ var name: String = ""
             ShapesButton.layer.cornerRadius = 20
             DrawButton.layer.cornerRadius = 20
             QuizButton.layer.cornerRadius = 20
-            nameField.text! = ("هيا لنتعلم يا\(name)")
+            nameField.text! = ("هيا لنتعلم يا \(name)")
             let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.black]
             navigationController?.navigationBar.titleTextAttributes = textAttributes
             // Do any additional setup after loading the view.

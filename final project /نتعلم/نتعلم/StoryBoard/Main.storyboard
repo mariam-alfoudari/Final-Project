@@ -86,6 +86,9 @@
                                 <state key="normal" title="اختبر معلوماتك" backgroundImage="Button1">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="NC9-Hx-h63" kind="showDetail" identifier="Quiz" id="cnj-CG-ntC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -105,21 +108,60 @@
             </objects>
             <point key="canvasLocation" x="2626" y="22"/>
         </scene>
-        <!--Shapes-->
+        <!--colors-->
         <scene sceneID="GeS-M2-jo0">
             <objects>
-                <viewController title="Shapes" id="xNh-1Q-fXr" sceneMemberID="viewController">
+                <viewController title="colors" id="xNh-1Q-fXr" customClass="ColorsVC" customModule="نتعلم" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ImD-kl-wEB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lMg-AW-A9a" customClass="colorsVC">
+                                <rect key="frame" x="0.0" y="64" width="414" height="778"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PZG-cn-JCa">
+                                    <size key="itemSize" width="374" height="123"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cardCell" id="DQd-FH-6Oe" customClass="colorsCardCell" customModule="نتعلم" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="0.0" width="374" height="123"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="taS-nH-VfM">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="123"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="اللون" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vL-z0-fGV">
+                                                    <rect key="frame" x="119" y="34" width="136" height="54"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Lateef" family="Lateef" pointSize="46"/>
+                                                    <color key="textColor" red="0.99215686270000003" green="1" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="374" height="123"/>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="5vL-z0-fGV" id="k9n-Ag-RqF"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="uHZ-c0-uGM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="B1r-wV-kNt"/>
+                    <connections>
+                        <outlet property="collectionView" destination="lMg-AW-A9a" id="MMT-qJ-1QD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g2J-da-d8e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3093" y="800"/>
+            <point key="canvasLocation" x="2109" y="826"/>
         </scene>
         <!--EnglishLetters-->
         <scene sceneID="dBf-OM-Cce">
@@ -173,7 +215,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bRp-dl-sR0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1114" y="87"/>
+            <point key="canvasLocation" x="830" y="-180"/>
         </scene>
         <!--Drawing-->
         <scene sceneID="Z92-nw-R8U">
@@ -215,21 +257,20 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AxH-rC-ubT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4057" y="310"/>
+            <point key="canvasLocation" x="4057" y="218"/>
         </scene>
         <!--Number Data-->
         <scene sceneID="Mci-VE-kZL">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rt8-uA-7wI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="j3p-jP-HPA" customClass="NumberData" customModule="نتعلم" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c2H-8U-NV7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uir-Ml-FLi">
-                                <rect key="frame" x="0.0" y="68" width="414" height="301"/>
+                                <rect key="frame" x="0.0" y="79" width="414" height="617"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.74117647060000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Edz-er-Zr9"/>
@@ -240,8 +281,86 @@
                         <outlet property="NumberImg" destination="uir-Ml-FLi" id="xHh-6R-tWx"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rt8-uA-7wI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2625" y="1572"/>
+            <point key="canvasLocation" x="1080" y="1355"/>
+        </scene>
+        <!--QuizVC-->
+        <scene sceneID="pNp-P2-xv1">
+            <objects>
+                <viewController id="NC9-Hx-h63" customClass="QuizVC" customModule="نتعلم" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e0K-bs-5xW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1l-65-q2H">
+                                <rect key="frame" x="18" y="663" width="374.00000000000006" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Lateef" family="Lateef" pointSize="53"/>
+                                <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="خطا" backgroundImage="Rectangle">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonClick:" destination="NC9-Hx-h63" eventType="touchUpInside" id="AGi-dT-xg0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nve-d9-EtI">
+                                <rect key="frame" x="18" y="544" width="374.00000000000006" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Lateef" family="Lateef" pointSize="53"/>
+                                <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="صح" backgroundImage="Rectangle">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonClick:" destination="NC9-Hx-h63" eventType="touchUpInside" id="cZ1-su-k9c"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBp-3c-dm3">
+                                <rect key="frame" x="20" y="56" width="100" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8Z6-w9-1Wn">
+                                <rect key="frame" x="0.0" y="788" width="350" height="6"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.2770131528" green="0.3800790906" blue="0.57570761439999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="progressTintColor" red="1" green="0.45854175089999999" blue="0.6605013609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="السوال" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCW-Ie-MWL">
+                                <rect key="frame" x="0.0" y="70" width="414" height="475"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Lateef" family="Lateef" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="النقاط " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qA2-Yo-Cw3">
+                                <rect key="frame" x="84" y="36" width="77" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Lateef" family="Lateef" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="e2R-JR-mxO"/>
+                        <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.74117647060000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <connections>
+                        <outlet property="falseButton" destination="g1l-65-q2H" id="7u6-Yk-W8p"/>
+                        <outlet property="progressBar" destination="8Z6-w9-1Wn" id="HYr-7j-hTO"/>
+                        <outlet property="questionLabel" destination="PCW-Ie-MWL" id="EQq-gV-WXv"/>
+                        <outlet property="scoreLabel" destination="qA2-Yo-Cw3" id="8d3-bp-KGx"/>
+                        <outlet property="trueButton" destination="Nve-d9-EtI" id="Try-Pm-eJY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vWH-LK-uV7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3190" y="826"/>
         </scene>
         <!--ArabicLetters-->
         <scene sceneID="AJW-41-wXa">
@@ -337,7 +456,7 @@
                                     <action selector="Tap:" destination="02o-FX-FgN" eventType="touchUpInside" id="J5c-gs-HSk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lmc-YS-0hh" userLabel="NumberBtn1">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lmc-YS-0hh" userLabel="NumberBtn1">
                                 <rect key="frame" x="148" y="225" width="118" height="127"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Lateef" family="Lateef" pointSize="51"/>
@@ -348,7 +467,7 @@
                                     <action selector="Tap:" destination="02o-FX-FgN" eventType="touchUpInside" id="6sO-cv-PnS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9KR-9N-gaE" userLabel="NumberBtn2">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9KR-9N-gaE" userLabel="NumberBtn2">
                                 <rect key="frame" x="285" y="225" width="118" height="127"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Lateef" family="Lateef" pointSize="51"/>
@@ -359,7 +478,7 @@
                                     <action selector="Tap:" destination="02o-FX-FgN" eventType="touchUpInside" id="SwQ-ng-cys"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYY-aR-8l0" userLabel="NumberBtn3">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYY-aR-8l0" userLabel="NumberBtn3">
                                 <rect key="frame" x="11" y="360" width="118" height="127"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Lateef" family="Lateef" pointSize="51"/>
@@ -370,7 +489,7 @@
                                     <action selector="Tap:" destination="02o-FX-FgN" eventType="touchUpInside" id="PJL-Sq-ojD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDI-em-evi" userLabel="NumberBtn4">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDI-em-evi" userLabel="NumberBtn4">
                                 <rect key="frame" x="148" y="360" width="118" height="127"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Lateef" family="Lateef" pointSize="51"/>
@@ -381,7 +500,7 @@
                                     <action selector="Tap:" destination="02o-FX-FgN" eventType="touchUpInside" id="HWn-lE-3sC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSi-wZ-bRp" userLabel="NumberBtn5">
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSi-wZ-bRp" userLabel="NumberBtn5">
                                 <rect key="frame" x="285" y="360" width="118" height="127"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Lateef" family="Lateef" pointSize="51"/>
@@ -392,7 +511,7 @@
                                     <action selector="Tap:" destination="02o-FX-FgN" eventType="touchUpInside" id="FBO-lx-U7g"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="te9-ts-fEB" userLabel="NumberBtn6">
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="te9-ts-fEB" userLabel="NumberBtn6">
                                 <rect key="frame" x="11" y="516" width="118" height="127"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Lateef" family="Lateef" pointSize="51"/>
@@ -403,7 +522,7 @@
                                     <action selector="Tap:" destination="02o-FX-FgN" eventType="touchUpInside" id="zjt-Nt-pEu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XaD-Oo-oyE" userLabel="NumberBtn7">
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XaD-Oo-oyE" userLabel="NumberBtn7">
                                 <rect key="frame" x="148" y="516" width="118" height="127"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Lateef" family="Lateef" pointSize="51"/>
@@ -414,7 +533,7 @@
                                     <action selector="Tap:" destination="02o-FX-FgN" eventType="touchUpInside" id="5Nc-sm-IVO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHC-zn-7mJ" userLabel="NumberBtn8">
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pHC-zn-7mJ" userLabel="NumberBtn8">
                                 <rect key="frame" x="285" y="516" width="118" height="127"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Lateef" family="Lateef" pointSize="51"/>
@@ -425,7 +544,7 @@
                                     <action selector="Tap:" destination="02o-FX-FgN" eventType="touchUpInside" id="Fn0-Wm-eSy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iju-s9-gXm" userLabel="NumberBtn9">
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iju-s9-gXm" userLabel="NumberBtn9">
                                 <rect key="frame" x="148" y="673" width="118" height="127"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="51"/>
@@ -457,12 +576,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cNz-bT-Hq6" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2262" y="810"/>
+            <point key="canvasLocation" x="336" y="619"/>
         </scene>
     </scenes>
     <resources>
         <image name="Button1" width="662" height="204"/>
+        <image name="Rectangle" width="322" height="68"/>
         <image name="button2" width="210" height="216"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

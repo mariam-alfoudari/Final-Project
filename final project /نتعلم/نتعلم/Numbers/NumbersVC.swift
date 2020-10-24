@@ -25,10 +25,28 @@ class NumbersVC: UIViewController {
       super.viewDidLoad()
         title = "اضغظ على الارقام!"
          }
-
+//    @IBAction func IfNumberTap(_ sender: UIButton) {
+//        switch sender.tag {
+//        case 0:
+//           print()
+//        case 1:
+//
+//        default:
+//            print("two2")
+//        }
+//    }
+//
+    
     @IBAction func Tap(_ sender: UIButton) {
-        performSegue(withIdentifier: "Details", sender: nil)
+         var indexNumber = sender.tag
+        performSegue(withIdentifier: "Details", sender: indexNumber)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let sender = sender as! Int
+        let vc = segue.destination as! NumberData
+        vc.indexNumber = sender
+    }
+    
     }
 
-}
 

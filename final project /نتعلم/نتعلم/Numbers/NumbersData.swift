@@ -6,33 +6,19 @@
 //
 
 import UIKit
-
 class NumberData: UIViewController {
-    @IBOutlet weak var NumberImg: UIImageView!
 
-    var images = ["image0"]
+    @IBOutlet weak var NumberImg: UIImageView!
+    var  indexNumber : Int!
+    var images = ["one1","two2","three3","four4","five5","six6","seven7","eight8", "nine9","ten10"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NumberImg.image = UIImage(named: images[indexNumber])
     }
-    
-//setNumberDetails()
-//        // Do any additional setup after loading the view.
-//    }
-//    func setNumberDetails(){
+//    var NumberData: [Numbers]  = [
+//        Numbers(ShowNumber: #imageLiteral(resourceName: "one1") ),
 //
-//var NumbersData: [Numbers] = [
-//   Numbers(NumberName: "١", PlayNumber:  "mp.3" ),
-//    Numbers(NumberName: "٢", PlayNumber: "mp.3" ),
-//    Numbers(NumberName: "٣", PlayNumber: "mp.3" ),
-//    Numbers(NumberName: "٤", PlayNumber: "mp.3" ),
-//    Numbers(NumberName: "٥", PlayNumber: "mp.3" ),
-//    Numbers(NumberName: "٦", PlayNumber: "mp.3" ),
-//     Numbers(NumberName: "٧", PlayNumber: "mp.3" ),
-//     Numbers(NumberName: "٨", PlayNumber: "mp.3" ),
-//     Numbers(NumberName: "٩", PlayNumber: "mp.3" ),
-//     Numbers(NumberName: "١٠", PlayNumber: "mp.3" ),
-//     ]
-//
-//}
+//    ]
+
 }

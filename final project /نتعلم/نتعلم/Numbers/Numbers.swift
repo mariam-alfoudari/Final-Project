@@ -4,9 +4,9 @@
 //
 //  Created by mariam alfoudari on 10/20/20.
 //
-
+import UIKit
 import Foundation
+
 struct Numbers{
-    var NumberName: String
-    var PlayNumber: String
+    var ShowNumber: UIImage
 }

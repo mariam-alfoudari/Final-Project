@@ -35,6 +35,8 @@
 		39DFF345253CA82E0065D288 /* Lateef-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39DFF342253CA8170065D288 /* Lateef-Regular.ttf */; };
 		39DFF347253CA8320065D288 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 39DFF343253CA8190065D288 /* OFL.txt */; };
 		39EBEFF82541C6A200FC5EBA /* DrawingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EBEFF72541C6A200FC5EBA /* DrawingVC.swift */; };
+		FBFBBD6F2544A9D5007C7280 /* IBElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFBBD6E2544A9D5007C7280 /* IBElements.swift */; };
+		FBFBBD732544AA1C007C7280 /* EnterNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFBBD722544AA1C007C7280 /* EnterNameVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		39DFF342253CA8170065D288 /* Lateef-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lateef-Regular.ttf"; sourceTree = "<group>"; };
 		39DFF343253CA8190065D288 /* OFL.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		39EBEFF72541C6A200FC5EBA /* DrawingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingVC.swift; sourceTree = "<group>"; };
+		FBFBBD6E2544A9D5007C7280 /* IBElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBElements.swift; sourceTree = "<group>"; };
+		FBFBBD722544AA1C007C7280 /* EnterNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterNameVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 		3928CE30253C6FAD001CDED4 /* نتعلم */ = {
 			isa = PBXGroup;
 			children = (
+				FBFBBD6D2544A980007C7280 /* EnterName */,
 				3941586825434E420090309B /* colors */,
 				391E5A5125426382003A4877 /* Quiz */,
 				39DFF326253CA0D90065D288 /* Font */,
@@ -207,6 +212,15 @@
 			path = English;
 			sourceTree = "<group>";
 		};
+		FBFBBD6D2544A980007C7280 /* EnterName */ = {
+			isa = PBXGroup;
+			children = (
+				FBFBBD6E2544A9D5007C7280 /* IBElements.swift */,
+				FBFBBD722544AA1C007C7280 /* EnterNameVC.swift */,
+			);
+			path = EnterName;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -286,6 +300,7 @@
 				3941587125434FFB0090309B /* ColorModel.swift in Sources */,
 				3928CE36253C6FAD001CDED4 /* ViewController.swift in Sources */,
 				3928CE32253C6FAD001CDED4 /* AppDelegate.swift in Sources */,
+				FBFBBD732544AA1C007C7280 /* EnterNameVC.swift in Sources */,
 				39EBEFF82541C6A200FC5EBA /* DrawingVC.swift in Sources */,
 				39BD0AE9253F3BB6004E5F11 /* NumbersVC.swift in Sources */,
 				395818DF253CD5190051B10C /* ArabicVC.swift in Sources */,
@@ -300,6 +315,7 @@
 				3974FD912542358B00A5CE03 /* Numbers.swift in Sources */,
 				3928CE50253C7083001CDED4 /* EnglishCardCell.swift in Sources */,
 				395818E9253CD6FB0051B10C /* ArabicVL.swift in Sources */,
+				FBFBBD6F2544A9D5007C7280 /* IBElements.swift in Sources */,
 				3928CE34253C6FAD001CDED4 /* SceneDelegate.swift in Sources */,
 				391E5A53254282EF003A4877 /* Qustion.swift in Sources */,
 			);
@@ -427,7 +443,7 @@
 		3928CE43253C6FAE001CDED4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PQSM74737Y;
@@ -447,7 +463,7 @@
 		3928CE44253C6FAE001CDED4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PQSM74737Y;
